@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipura Cell</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <h1 class="logo">e-Katalog | Dipura Cell</h1>
+    <nav class="nav">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="page-title">
+    <h2>Daftar Laptop</h2>
+    <p>Pilih laptop terbaik sesuai kebutuhan Anda</p>
+  </section>
+
+  <section id="produkGrid" class="produk-grid"></section>
+
+  <div class="pagination">
+    <button onclick="prevPage()">❮</button>
+    <span id="pageInfo"></span>
+    <button onclick="nextPage()">❯</button>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Dipura Cell</p>
+</footer>
+
+<script src="assets/js/produk.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- TOGGLE SPESIFIKASI -->
+<script>
+function toggleSpec(btn) {
+  const spec = btn.nextElementSibling;
+  spec.classList.toggle("show");
+
+  btn.textContent = spec.classList.contains("show")
+    ? "Tutup Spesifikasi"
+    : "Spesifikasi";
+}
+</script>
+
+</body>
+</html>
